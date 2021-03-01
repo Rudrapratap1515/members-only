@@ -1,0 +1,16 @@
+<% form_with model: @post do |form| %>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+
+    <%= form.label :image %><br>
+    <%= form.text_field :image %>
+
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+
+    <%= form.hidden_field :user_id, value:current_user.id %>
+    <%= form.submit %>
+<% end %>
